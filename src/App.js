@@ -1,11 +1,15 @@
+
 import NavBarMain from './components/NavBarMain';
-import StyleTest from './components/StyleTest'
+import Stage from './components/Stage';
+//import StyleTest from './components/StyleTest'
 
 function App() {
   return (
     <div>
-    <NavBarMain /> 
-    <StyleTest />
+    <Stage />
+    <NavBarMain />
+    
+    {/* <StyleTest/> */}
     </div>
   );
 }
