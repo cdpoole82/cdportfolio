@@ -6,6 +6,10 @@
 
 /* TBD ON HOW TO BEST ORGANIZE-SORT CSS SELECTORS
 */
+.bogus {
+  color: #9f9fec
+}
+
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;} 
 
 body, html {
@@ -23,27 +27,23 @@ body, html {
     
 }
 
-div.fixed {
+
+/* Style the top navigation bar */
+.topnav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  
-}
-
-/* Style the top navigation bar */
-.topnav {
   overflow: hidden;
   background-color: #333;
+  
 }
 
 /* Style the topnav links */
 .topnav a {
   float: left;
-  display: block;
   color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+  padding: 11px 13px;
   text-decoration: none;
 }
 
@@ -53,9 +53,26 @@ div.fixed {
   color: black;
 }
 
+.fa-icon {
+  vertical-align:text-top; 
+  margin-top: 1px;
+  margin-right: 8px;
+}
+
+.fa-icon-sub {
+  vertical-align:text-top; 
+  margin-top: 0px;
+  margin-left: 5px;
+}
 
 /* Style the footer */
 .footer {
-  background-color: #f1f1f1;
-  padding: 10px;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 11px;
+  background-color: #001800;
+  color: #f2f2f2;
+  
 }
