@@ -1,4 +1,4 @@
-function Footer() {
+const Footer = () => {
     return (
         <div className="footer">
             <p>Copyright 2021 - Christopher Poole</p>            
