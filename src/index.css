@@ -14,7 +14,7 @@
 --spacing: used to create vertical space between grid element blocks
 */
 :root {
-  --dark-bg: #264c73f6;
+  --dark-bg: #234669f6;
   --spacing: 275px;
   
 }
@@ -38,13 +38,19 @@ body,h1,h2,h3,h4,h5,h6 {
   grid-template-columns: repeat(12, 1fr); /* 12 columns of height 1 fractional unit*/
 }
 
-#introheader {
+.introheader {
   background: var(--dark-bg);
-  grid-column: 2 / span 6;
+  grid-column: 2 / span 7;
   font-size: 2rem;
   padding: 1.5rem;
   margin-bottom: var(--spacing);
 }
+
+.introheader p {
+  line-height: 2.0;
+}
+
+
 
 #introsection {
   grid-column: 2 / 8;

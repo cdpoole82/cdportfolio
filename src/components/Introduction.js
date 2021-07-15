@@ -1,4 +1,4 @@
-import cdp1 from "../images/cdp1.jpg"
+import cdp1 from "../images/cdp1.png"
 const Introduction = ({cssdisplay}) => {
        
     return (
@@ -6,8 +6,8 @@ const Introduction = ({cssdisplay}) => {
                      
             <main id="intro" style={{display: cssdisplay}}>
                                
-                <header id="introheader">
-                   <img src={cdp1} alt="Christopher Poole" style={{float:"left", marginRight:"30px", width:"250px",height:"175px"}} />
+                <header className="introheader">
+                   <img src={cdp1} alt="Christopher Poole" style={{float:"left", marginRight:"30px", width:"200px",height:"200px"}} />
                    <h1>Christopher Poole</h1>
                    <p>Welcome to my portfolio!</p>
                 </header>
