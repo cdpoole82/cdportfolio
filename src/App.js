@@ -19,10 +19,13 @@ function App() {
                 setCSSDisplay("none");
                 break;
             case "Sphere1":
-              window.alert("Sphere 1???")
+              window.alert("Load project 1...")
               break;
             case "Sphere2":
-              window.alert("Sphere 2???")
+              window.alert("Load project 2...")
+              break;
+            case "Sphere3":
+              window.alert("Load project 3...")
               break;
             default:
                 setCSSDisplay("grid")

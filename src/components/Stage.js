@@ -15,7 +15,18 @@
                 color='hotpink' 
                 factor={1}
                 speed={10}
-                />
+    />
+
+    <meshPhongMaterial
+                    displacementScale={0.2}
+                    map={colorMap}
+                    displacementMap={displacementMap}
+                    normalMap={normalMap}
+                    roughnessMap={roughnessMap}
+                    aoMap={aoMap}
+                                        
+     />
+
 */
 
 import React from 'react'
@@ -23,79 +34,96 @@ import { Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Environment, OrbitControls, useTexture } from '@react-three/drei'
 
-const Stage = ({updateCSSDisplay}) => {
+const Stage = ({ updateCSSDisplay }) => {
 
-    
+
     //Animated Primary Sphere model
     function AnimatedSphere1() {
-        
-         const sphere1 = React.useRef();
-        
+
+        const sphere1 = React.useRef();
+
         const [colorMap, normalMap] = useTexture([
             './textures/mooncolor.jpg',
             './textures/moonnormal.jpg',
-            './textures/PavingStones092_1K_Normal.jpg',
-            './textures/PavingStones092_1K_Roughness.jpg',
-            './textures/PavingStones092_1K_AmbientOcclusion.jpg',
+
         ])
 
         useFrame(({ clock }) => {
             sphere1.current.rotation.z = clock.getElapsedTime()
-            
+
         })
 
         return (
-            <mesh ref={sphere1} position={[2,1.5, 0]} onClick={()=>updateCSSDisplay("Sphere1")}>
+            <mesh ref={sphere1} position={[-6, 0, -1]} onClick={() => updateCSSDisplay("Sphere1")}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     displacementScale={0.2}
                     map={colorMap}
                     normalMap={normalMap}
-                                        
+
                 />
             </mesh>
-            
+
         )
     }
 
     //Animated Second Sphere model
     function AnimatedSphere2() {
-        
-       const sphere2 = React.useRef();
-       
-       const [colorMap, displacementMap, normalMap, roughnessMap, aoMap] = useTexture([
-            './textures/PavingStones092_1K_Color.jpg',
-            './textures/PavingStones092_1K_Displacement.jpg',
-            './textures/PavingStones092_1K_Normal.jpg',
-            './textures/PavingStones092_1K_Roughness.jpg',
-            './textures/PavingStones092_1K_AmbientOcclusion.jpg',
-        ])     
 
-       useFrame(({ clock }) => {
-           sphere2.current.rotation.z = clock.getElapsedTime()
-           
-       })
+        const sphere2 = React.useRef();
 
-       return (
-           <mesh ref={sphere2} position={[6,1.5, 0]} onClick={()=>updateCSSDisplay("Sphere2")}>
-               <sphereGeometry args={[1, 100, 100]} />
-               <meshPhongMaterial
-                   displacementScale={0.2}
-                   map={colorMap}
-                   displacementMap={displacementMap}
-                   normalMap={normalMap}
-                   roughnessMap={roughnessMap}
-                   aoMap={aoMap}
-                                       
-               />
-           </mesh>
-           
-       )
-   }
+        const [colorMap] = useTexture([
+            './textures/wfd1.png',
 
-    
-    
-    
+        ])
+
+        useFrame(({ clock }) => {
+            sphere2.current.rotation.z = clock.getElapsedTime()
+
+        })
+
+        return (
+            <mesh ref={sphere2} position={[0, 0, -4]} onClick={() => updateCSSDisplay("Sphere2")}>
+                <sphereGeometry args={[1, 100, 100]} />
+                <meshPhongMaterial
+                    map={colorMap}
+
+                />
+            </mesh>
+
+        )
+    }
+
+    //Animated Primary Sphere model
+    function AnimatedSphere3() {
+
+        const sphere3 = React.useRef();
+
+        const [colorMap] = useTexture([
+            './textures/CreatureSheet.jpg',
+
+        ])
+
+        useFrame(({ clock }) => {
+            sphere3.current.rotation.z = clock.getElapsedTime()
+
+        })
+
+        return (
+            <mesh ref={sphere3} position={[6, 0, -1]} onClick={() => updateCSSDisplay("Sphere3")}>
+                <sphereGeometry args={[1, 100, 100]} />
+                <meshPhongMaterial
+                    map={colorMap}
+
+                />
+            </mesh>
+
+        )
+    }
+
+
+
+
     //THE STAGE CANVAS  --defines the scene, lighting, and objects to place including helpers and user controls   
     return (
         <div className='canvas-container'>
@@ -106,7 +134,7 @@ const Stage = ({updateCSSDisplay}) => {
                     <Environment preset="night" background />
                     <ambientLight intensity={0.1} />
                     <directionalLight position={[0, 0, 1]} />
-                    
+
 
                     {/*Camera and Controls*/}
                     <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
@@ -114,6 +142,7 @@ const Stage = ({updateCSSDisplay}) => {
                     {/*Component Models*/}
                     <AnimatedSphere1 />
                     <AnimatedSphere2 />
+                    <AnimatedSphere3 />
 
                 </Suspense>
             </Canvas>
