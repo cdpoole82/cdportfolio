@@ -1,3 +1,4 @@
+import cdp1 from "../images/cdp1.jpg"
 const Introduction = ({cssdisplay}) => {
        
     return (
@@ -6,12 +7,16 @@ const Introduction = ({cssdisplay}) => {
             <main id="intro" style={{display: cssdisplay}}>
                                
                 <header id="introheader">
-                    <h1>Christoper Poole</h1>
-                    <p>Welcome to my portfolio!</p>
+                   <img src={cdp1} alt="Christopher Poole" style={{float:"left", marginRight:"30px", width:"250px",height:"175px"}} />
+                   <h1>Christopher Poole</h1>
+                   <p>Welcome to my portfolio!</p>
                 </header>
 
                 <blockquote className="blockquoteintro">
-                    <p>I like making stuff and putting it on the internet</p>
+                    <p>
+                    "The mind is like a parachute; it works better when it's open." <em> -Unknown</em>
+                    </p>
+                
                 </blockquote>
 
                 <section id="introsection">
@@ -46,7 +51,9 @@ const Introduction = ({cssdisplay}) => {
                 </section>
 
                 <blockquote className="blockquoteintro">
-                    <p>The best way out is always through -Robert Frost</p>
+                    <p>
+                        "I shut my eyes in order to see." <em> -Paul Gauguin</em>
+                    </p>
                 </blockquote>
 
                 <section id="introsectionright">
@@ -69,7 +76,7 @@ const Introduction = ({cssdisplay}) => {
 
 
                 <blockquote className="blockquoteintro">
-                    <p>Click PROJECTS to enable project explore mode amongst the stars!</p>
+                    <p>Click PROJECTS to enable project explore mode!</p>
                 </blockquote>
 
             </main>

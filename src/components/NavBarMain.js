@@ -1,4 +1,4 @@
-import { FaGithub, FaRegComment, FaTh } from 'react-icons/fa'
+import { FaGithub, FaTh } from 'react-icons/fa'
 
 /*
 function showHint() {
