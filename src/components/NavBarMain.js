@@ -1,4 +1,4 @@
-import { FaGithub, FaTh } from 'react-icons/fa'
+import {FaTh } from 'react-icons/fa'
 
 /*
 function showHint() {
@@ -15,8 +15,7 @@ const NavBarMain = ({updateCSSDisplay}) => {
             <div className='topnav'>
                 <a href="#home" onClick={() => updateCSSDisplay("Home")}>HOME</a>
                 <a href="#projects" onClick={() => updateCSSDisplay("Projects")}><FaTh className='fa-icon' />PROJECTS</a>
-                <a href="https://github.com/cdpoole82" rel="noreferrer" target="_blank"><FaGithub className='fa-icon' />GITHUB</a>
-               
+                           
             </div>
             
         </div>
