@@ -16,7 +16,7 @@
 :root {
   --dark-bg: #234669f6;
   --spacing: 275px;
-  
+  background-image: url("./images/dikhololo_night.jpg")
 }
 
 body,h1,h2,h3,h4,h5,h6 {
@@ -27,14 +27,7 @@ body,h1,h2,h3,h4,h5,h6 {
 
 /*STYLING FOR INTRODUCTION COMPONENT*/
 
-#intro {
-  width: 100vw;
-  z-index: 98;
-  position: absolute;
-  width: 100%;
-  margin: 0px auto;
-  padding: 120px 0px;
-   
+.introduction{  
   grid-template-columns: repeat(12, 1fr); /* 12 columns of height 1 fractional unit*/
 }
 
@@ -49,8 +42,6 @@ body,h1,h2,h3,h4,h5,h6 {
 .introheader p {
   line-height: 2.0;
 }
-
-
 
 #introsection {
   grid-column: 2 / 8;

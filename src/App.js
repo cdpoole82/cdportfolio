@@ -4,47 +4,45 @@ import Introduction from './components/Introduction'
 import Stage from './components/Stage'
 import Footer from './components/Footer'
 
+
+
 //import StyleTest from './components/StyleTest'
 
 function App() {
-  const [cssdisplay, setCSSDisplay] = useState("grid");
-  
-  function updateCSSDisplay(clickArg) {
-     
-    switch (clickArg) {
-            case "Home":
-                setCSSDisplay("grid");
-                break;
-            case "Projects":
-                setCSSDisplay("none");
-                break;
-            case "Sphere1":
-              window.alert("Load project 1...")
-              break;
-            case "Sphere2":
-              window.alert("Load project 2...")
-              break;
-            case "Sphere3":
-              window.alert("Load project 3...")
-              break;
-            default:
-                setCSSDisplay("grid")
-        }
-       
+
+  const [showHideIntro, setShowHideIntro] = useState(true);
+  const [showHideStage, setShowHideStage] = useState(false);
+
+  function showHideComponent(arg) {
+    console.log(arg)
+
+    switch (arg) {
+      case "showHideIntro":
+        setShowHideIntro(true)
+        setShowHideStage(false)
+        break;
+      case "showHideStage":
+        setShowHideStage(!showHideStage)
+        break;
+      default:
+        break;
+    }
+
   }
 
-  return (
-    <div>
-
-      <NavBarMain updateCSSDisplay={updateCSSDisplay} />
-      <Introduction cssdisplay={cssdisplay}  />
-      <Stage updateCSSDisplay={updateCSSDisplay} />
-      <Footer />
 
 
-      {/* <StyleTest/> */}
-    </div>
-  );
+return (
+  <div>
+
+    <NavBarMain showHideComponent={showHideComponent} />
+    {showHideIntro && <Introduction />}
+    {showHideStage && <Stage />}
+    <Footer />
+
+    
+  </div>
+);
 }
 
 export default App;

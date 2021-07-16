@@ -1,10 +1,11 @@
 import cdp1 from "../images/cdp1.png"
-const Introduction = ({cssdisplay}) => {
+
+const Introduction = () => {
        
     return (
         <div>
-                     
-            <main id="intro" style={{display: cssdisplay}}>
+                                 
+            <main>
                                
                 <header className="introheader">
                    <img src={cdp1} alt="Christopher Poole" style={{float:"left", marginRight:"30px", width:"200px",height:"200px"}} />

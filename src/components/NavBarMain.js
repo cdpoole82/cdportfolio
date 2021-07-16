@@ -1,4 +1,5 @@
-import {FaTh } from 'react-icons/fa'
+import { FaTh } from 'react-icons/fa'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 /*
 function showHint() {
@@ -8,18 +9,36 @@ function showHint() {
 */
 
 // 
-const NavBarMain = ({updateCSSDisplay}) => {
-                    
-    return (
-        <div>
-            <div className='topnav'>
-                <a href="#home" onClick={() => updateCSSDisplay("Home")}>HOME</a>
-                <a href="#projects" onClick={() => updateCSSDisplay("Projects")}><FaTh className='fa-icon' />PROJECTS</a>
-                           
-            </div>
-            
-        </div>
+const NavBarMain = ({ showHideComponent }) => {
 
+    return (
+
+        <Router>
+            <div className="topnav">
+                <nav>
+
+                    <Link to="/" onClick={() => showHideComponent("showHideIntro")}>HOME</Link>
+                    <Link to="/Stage" onClick={() => showHideComponent("showHideStage")}><FaTh className='fa-icon' />PROJECTS</Link>
+
+                </nav>
+
+                {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+                {/*  <Switch>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/users">
+                        <Users />
+                    </Route>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                </Switch> */}
+            </div>
+        </Router>
+
+        
     )
 }
 
