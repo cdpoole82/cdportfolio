@@ -32,10 +32,10 @@
 import React from 'react'
 import { Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Environment, OrbitControls, useTexture } from '@react-three/drei'
+import { OrbitControls, useTexture, Environment } from '@react-three/drei'
 
-const Stage = ({ updateCSSDisplay }) => {
 
+const Stage = () => {
 
     //Animated Primary Sphere model
     function AnimatedSphere1() {
@@ -54,7 +54,7 @@ const Stage = ({ updateCSSDisplay }) => {
         })
 
         return (
-            <mesh ref={sphere1} position={[-6, 0, -1]} onClick={() => updateCSSDisplay("Sphere1")}>
+            <mesh ref={sphere1} position={[-3, 1, -1]} >
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     displacementScale={0.2}
@@ -83,7 +83,7 @@ const Stage = ({ updateCSSDisplay }) => {
         })
 
         return (
-            <mesh ref={sphere2} position={[0, 0, -4]} onClick={() => updateCSSDisplay("Sphere2")}>
+            <mesh ref={sphere2} position={[0, 5, -4]}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     map={colorMap}
@@ -110,7 +110,7 @@ const Stage = ({ updateCSSDisplay }) => {
         })
 
         return (
-            <mesh ref={sphere3} position={[6, 0, -1]} onClick={() => updateCSSDisplay("Sphere3")}>
+            <mesh ref={sphere3} position={[3, -1, -1]}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     map={colorMap}
@@ -120,21 +120,15 @@ const Stage = ({ updateCSSDisplay }) => {
 
         )
     }
-
-
-
-
     //THE STAGE CANVAS  --defines the scene, lighting, and objects to place including helpers and user controls   
     return (
-        <div className='canvas-container'>
-            <Canvas>
+        <div className="canvas-container" >
+            <Canvas >
                 <Suspense fallback={null}>
-
                     {/*Atmosphere*/}
-                    <Environment preset="night" background />
+                    <Environment preset={"night"} background />
                     <ambientLight intensity={0.1} />
                     <directionalLight position={[0, 0, 1]} />
-
 
                     {/*Camera and Controls*/}
                     <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
@@ -145,6 +139,7 @@ const Stage = ({ updateCSSDisplay }) => {
                     <AnimatedSphere3 />
 
                 </Suspense>
+               
             </Canvas>
         </div>
     )

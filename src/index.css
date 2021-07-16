@@ -6,7 +6,7 @@
 
 /* bogus is not called, but I use it for a quick color picker*/
 .bogus {
-  color: #9f9fec
+  color: #c7c7ca
 }
 
 /*root = HTML element* and a good element to define style variables 
@@ -15,44 +15,104 @@
 */
 :root {
   --dark-bg: #234669f6;
-  --spacing: 275px;
-  background-image: url("./images/dikhololo_night.jpg")
+  --spacing: 100px;
+  --topmarg: 40px;
+   
 }
 
+/*Default global font family and text color for site.*/
 body,h1,h2,h3,h4,h5,h6 {
   font-family: "Lato", sans-serif;
   color: #ffffff;
   
 } 
 
+/*STYLING FOR NAV HEADER AND FOOTER*/
+
+/* Style for font awesome navigation icons*/
+.fa-icon {
+  vertical-align:text-top; 
+  margin-top: 1px;
+  margin-right: 8px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  top: 0;
+  left: 0;
+  z-index: 99;
+  position: fixed;
+  width:100%;
+  overflow: hidden; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #333333;
+  
+}
+
+/* Style the topnav links */
+.topnav a {
+  color: #f2f2f2;
+  padding: 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Style the footer */
+.footer {
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  position: fixed;
+  width:100%;
+  overflow: hidden;
+  background-color: #333333;
+  padding-left: 15px;
+  
+}
+
+.footer a {
+  padding: 25px;
+  color: #f2f2f2;
+  
+}
+
+
 /*STYLING FOR INTRODUCTION COMPONENT*/
 
-.introduction{  
-  grid-template-columns: repeat(12, 1fr); /* 12 columns of height 1 fractional unit*/
+.introduction {   
+  width: 100%;
+  margin-top: var(--topmarg);
+  background: #e7e7ff;
+  background-image: url("./images/summerbeach.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+
+}
+
+#intromain {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 column width at 1 fractional unit*/
 }
 
 .introheader {
   background: var(--dark-bg);
   grid-column: 2 / span 7;
   font-size: 2rem;
-  padding: 1.5rem;
-  margin-bottom: var(--spacing);
-}
-
-.introheader p {
+  padding: 1rem;
   line-height: 2.0;
+  margin-bottom: var(--spacing);
 }
 
 #introsection {
-  grid-column: 2 / 8;
-  padding: 1rem;
-  background: var(--dark-bg);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: var(--spacing);
-}
-
-#introsectionright{
   grid-column: 6 / 12;
   padding: 1rem;
   background: var(--dark-bg);
@@ -69,77 +129,15 @@ blockquote {
 }
 
 blockquote p {
-  color: #f2f2f2;
+  color: #000000;
   font-size: 2rem;
   display: inline;
   line-height: 1;
 }
 
-
-
+/*STYLING FOR STAGE COMPONENT*/
 .canvas-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-    
-}
-
-
-/* Style the top navigation bar */
-.topnav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  width: 100%;
-  overflow: hidden;
-  background-color: #333333;
-  
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  padding: 11px 13px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.fa-icon {
-  vertical-align:text-top; 
-  margin-top: 1px;
-  margin-right: 8px;
-}
-
-.fa-icon-sub {
-  vertical-align:text-top; 
-  margin-top: 0px;
-  margin-left: 5px;
-}
-
-/* Style the footer */
-.footer {
-  position:fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  width: 100%;
-  padding-left: 11px;
-  background-color: #333333;
-  color: #f2f2f2;
-  
-}
-
-.footer a {
-  margin-left: 45px;
-  color: #f2f2f2;
-  
-}
+  width: 100vw;
+  height: 100vh;
+  margin-top: var(--topmarg);
+ }

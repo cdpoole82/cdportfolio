@@ -1,8 +1,8 @@
-import { useState } from 'react'
-import NavBarMain from './components/NavBarMain'
 import Introduction from './components/Introduction'
 import Stage from './components/Stage'
 import Footer from './components/Footer'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { FaTh } from 'react-icons/fa'
 
 
 
@@ -10,39 +10,33 @@ import Footer from './components/Footer'
 
 function App() {
 
-  const [showHideIntro, setShowHideIntro] = useState(true);
-  const [showHideStage, setShowHideStage] = useState(false);
-
-  function showHideComponent(arg) {
-    console.log(arg)
-
-    switch (arg) {
-      case "showHideIntro":
-        setShowHideIntro(true)
-        setShowHideStage(false)
-        break;
-      case "showHideStage":
-        setShowHideStage(!showHideStage)
-        break;
-      default:
-        break;
-    }
-
-  }
-
-
-
-return (
-  <div>
-
-    <NavBarMain showHideComponent={showHideComponent} />
-    {showHideIntro && <Introduction />}
-    {showHideStage && <Stage />}
-    <Footer />
-
-    
-  </div>
-);
+  
+  return (
+  
+      <Router>
+        <div >
+          <nav className="topnav">
+            <Link to="/Introduction">HOME</Link>
+            <Link to="/Stage"><FaTh className='fa-icon' />PROJECTS</Link>
+          </nav>
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route exact path="/">
+              <Introduction />
+            </Route>
+            <Route path="/Introduction">
+              <Introduction />
+            </Route>
+            <Route path="/Stage">
+              <Stage/>
+            </Route>            
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+         
+  );
 }
 
 export default App;
