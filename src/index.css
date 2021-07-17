@@ -83,18 +83,19 @@ body,h1,h2,h3,h4,h5,h6 {
   
 }
 
+/*SHARED STYLING FOR PROJECT COMPONENETS*/
+
+
 
 /*STYLING FOR INTRODUCTION COMPONENT*/
 
 .introduction {   
   width: 100%;
   margin-top: var(--topmarg);
-  background: #e7e7ff;
   background-image: url("./images/summerbeach.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   
-
 }
 
 #intromain {
@@ -133,6 +134,27 @@ blockquote p {
   font-size: 2rem;
   display: inline;
   line-height: 1;
+}
+
+/*STYLING FOR WFD COMPONENT*/
+.wfd {   
+  width: 100%;
+  margin-top: var(--topmarg);
+  background-color: cyan;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+
+
+/*STYLING FOR DND COMPONENT*/
+.dnd {   
+  width: 100%;
+  margin-top: var(--topmarg);
+  background-color:darkkhaki;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
 }
 
 /*STYLING FOR STAGE COMPONENT*/
