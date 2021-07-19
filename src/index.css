@@ -148,14 +148,47 @@ blockquote p {
 
 
 /*STYLING FOR DND COMPONENT*/
+
+
 .dnd {   
   width: 100%;
   margin-top: var(--topmarg);
-  background-color:darkkhaki;
+  background-color:#793280;
+  background-image: url("./images/dungeonbg.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   
 }
+
+#dndmain {
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 column width at 1 fractional unit*/
+}
+
+.dndheader {
+  background: var(--dark-bg);
+  grid-column: 2 / span 7;
+  font-size: 2rem;
+  padding: 1rem;
+  line-height: 2.0;
+  margin-bottom: var(--spacing);
+}
+
+#dndsection {
+  grid-column: 6 / 12;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+#dndgallery {
+  grid-column: 2 / 12;
+  margin-bottom: var(--spacing);
+}
+
 
 /*STYLING FOR STAGE COMPONENT*/
 .canvas-container {

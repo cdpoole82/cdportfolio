@@ -43,21 +43,20 @@ const Stage = () => {
         const sphere1 = React.useRef();
 
         const [colorMap, normalMap] = useTexture([
-            './textures/mooncolor.jpg',
+            './textures/moon.jpg',
             './textures/moonnormal.jpg',
 
         ])
 
         useFrame(({ clock }) => {
-            sphere1.current.rotation.z = clock.getElapsedTime()
+            sphere1.current.rotation.x = clock.getElapsedTime()
 
         })
 
         return (
-            <mesh ref={sphere1} position={[-3, 1, -1]} >
+            <mesh ref={sphere1} position={[1.5, 5, -4]} scale={.50}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
-                    displacementScale={0.2}
                     map={colorMap}
                     normalMap={normalMap}
 
@@ -73,7 +72,8 @@ const Stage = () => {
         const sphere2 = React.useRef();
 
         const [colorMap] = useTexture([
-            './textures/wfd1.png',
+            './textures/sun-2k.jpg',
+            
 
         ])
 
@@ -83,11 +83,11 @@ const Stage = () => {
         })
 
         return (
-            <mesh ref={sphere2} position={[0, 5, -4]}>
+            <mesh ref={sphere2} position={[-1, 1, 0]}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     map={colorMap}
-
+                    
                 />
             </mesh>
 
@@ -99,21 +99,27 @@ const Stage = () => {
 
         const sphere3 = React.useRef();
 
-        const [colorMap] = useTexture([
-            './textures/CreatureSheet.jpg',
+        const [colorMap, normalMap, specularMap] = useTexture([
+            './textures/earth_daymap.jpg',
+            './textures/earth_normal_map.jpg',
+            './textures/earth_specular_map.jpg',
+            
+           
 
         ])
 
         useFrame(({ clock }) => {
-            sphere3.current.rotation.z = clock.getElapsedTime()
+            sphere3.current.rotation.y = clock.getElapsedTime()
 
         })
 
         return (
-            <mesh ref={sphere3} position={[3, -1, -1]}>
+            <mesh ref={sphere3} position={[4, 3, -4]}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     map={colorMap}
+                    normalMap={normalMap}
+                    specularMap={specularMap}                   
 
                 />
             </mesh>
@@ -127,9 +133,10 @@ const Stage = () => {
                 <Suspense fallback={null}>
                     {/*Atmosphere*/}
                     <Environment preset={"night"} background />
-                    <ambientLight intensity={0.1} />
-                    <directionalLight position={[0, 0, 1]} />
+                    <ambientLight intensity={.5} />
+                    <directionalLight position={[-1,0,0]} intensity={1} color={0xffffff}/>
 
+                    
                     {/*Camera and Controls*/}
                     <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
 
