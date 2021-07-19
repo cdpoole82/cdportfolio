@@ -21,8 +21,8 @@ function App() {
         <div >
           <nav className="topnav">
             <Link to="/Introduction">HOME</Link>
-            <Link to="/Stage"><MdRotate90DegreesCcw className='fa-icon' />3D Animation</Link>
             <Link to="/WFD"><FaDatabase className='fa-icon' />WFD Application</Link>
+            <Link to="/Stage"><MdRotate90DegreesCcw className='fa-icon' />3D Animation</Link>
             <Link to="/DND"><GiSpikedDragonHead className='fa-icon' />D&D Utility</Link>
           </nav>
           {/* A <Switch> looks through its children <Route>s and

@@ -148,7 +148,7 @@ blockquote p {
 }
 
 #wfdsection {
-  grid-column: 2 / span 7;
+  grid-column: 2 / span 10;
   padding: 1rem;
   background: var(--dark-bg);
   font-size: 1.25rem;
