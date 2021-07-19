@@ -140,10 +140,29 @@ blockquote p {
 .wfd {   
   width: 100%;
   margin-top: var(--topmarg);
-  background-color: cyan;
+  background-image: url("./images/firetruck.jpg");
+  background-color: #c1b6ff;
   background-size: contain;
   background-repeat: no-repeat;
   
+}
+
+#wfdsection {
+  grid-column: 2 / span 7;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+#wfdsectionright {
+  grid-column: 6 / 12;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
 }
 
 

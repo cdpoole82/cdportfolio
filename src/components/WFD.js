@@ -1,4 +1,7 @@
 import wfdlogo from "../images/wfdlogo.png"
+import schedulerbefore from "../images/scheduler-before.png"
+import schedulerafter from "../images/scheduler-after.png"
+
 
 
 const Introduction = () => {
@@ -9,13 +12,13 @@ const Introduction = () => {
             <main id="intromain">
                                
                 <header className="introheader">
-                   <img src={wfdlogo} alt="Workforce Director logo" style={{float:"left", marginRight:"30px", width:"200px",height:"200px"}} />
+                   <img src={wfdlogo} alt="Workforce Director logo" style={{float:"left", marginRight:"30px", width:"200px",height:"80px"}} />
                    <h1>Workforce Director</h1>
                    <p>A VB.NET Web Application</p>
                 </header>
 
                 
-                <section id="introsection">
+                <section id="wfdsectionright">
                     <h2>Project</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -31,10 +34,21 @@ const Introduction = () => {
 
                 </section>
 
+                <section id="wfdsection">
+                    <h2>User Interface</h2>
+                    <p>
+                        Silverlight Scheduling Upgrade (before and after)                                   
+                    </p>  
+                    <p>
+                    <img src={schedulerbefore} alt="Workforce Director logo" style={{padding:"20px", width:"825px",height:"600px"}} />   
+                    <img src={schedulerafter} alt="Workforce Director logo" style={{padding: "20px", width:"825px",height:"600px"}} />                  
+                    </p>
+                </section>
+
                 
                 <blockquote className="blockquoteintro">
                     <p>
-                        blockquote text here for possilbe use...
+                        <em>"True public safety requires a collaboration between law enforcement and the community. -Betsy Hodges"</em>
                     </p>
                 </blockquote>
 
