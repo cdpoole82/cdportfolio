@@ -4,6 +4,7 @@
 @import url('https://www.w3schools.com/w3css/4/w3.css');
 @import url('https://fonts.googleapis.com/css?family=Lato'); /*imports base font family for site*/
 
+
 /* bogus is not called, but I use it for a quick color picker*/
 .bogus {
   color: #c7c7ca
@@ -167,7 +168,10 @@ blockquote p {
 
 
 /*STYLING FOR DND COMPONENT*/
-
+.imagecontainer {
+  float: left;
+  margin-right: 20px;
+}
 
 .dnd {   
   width: 100%;
@@ -187,11 +191,16 @@ blockquote p {
 
 .dndheader {
   background: var(--dark-bg);
-  grid-column: 2 / span 7;
-  font-size: 2rem;
+  grid-column: 2 / span 8;
   padding: 1rem;
-  line-height: 2.0;
+  font-size: 1rem;
   margin-bottom: var(--spacing);
+}
+
+.dndattribution {
+  display: block;
+  font-size: 1rem;
+  color:darkcyan;
 }
 
 #dndsection {
@@ -204,8 +213,16 @@ blockquote p {
 }
 
 #dndgallery {
-  grid-column: 2 / 12;
+  grid-column: 2 / 10;
   margin-bottom: var(--spacing);
+}
+
+.slide {
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  height: 600px;
+  
 }
 
 
