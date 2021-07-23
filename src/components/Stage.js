@@ -33,99 +33,100 @@ import React from 'react'
 import { Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, useTexture, Environment } from '@react-three/drei'
+import { Object3D } from 'three';
+
 
 
 const Stage = () => {
 
-    //Animated Primary Sphere model
-    function AnimatedSphere1() {
+    //Celestial References
+    const sun = React.useRef();
+    const earth = React.useRef();
+    const moon = React.useRef();
 
-        const sphere1 = React.useRef();
+          
+    //CREATE MESHES
+    function SUN() {
 
-        const [colorMap, normalMap] = useTexture([
-            './textures/moon.jpg',
-            './textures/moonnormal.jpg',
-
-        ])
-
-        useFrame(({ clock }) => {
-            sphere1.current.rotation.x = clock.getElapsedTime()
-
-        })
-
-        return (
-            <mesh ref={sphere1} position={[1.5, 5, -4]} scale={.50}>
-                <sphereGeometry args={[1, 100, 100]} />
-                <meshPhongMaterial
-                    map={colorMap}
-                    normalMap={normalMap}
-
-                />
-            </mesh>
-
-        )
-    }
-
-    //Animated Second Sphere model
-    function AnimatedSphere2() {
-
-        const sphere2 = React.useRef();
-
-        const [colorMap] = useTexture([
+        const [suncolormap] = useTexture([
             './textures/sun-2k.jpg',
-            
-
         ])
 
         useFrame(({ clock }) => {
-            sphere2.current.rotation.z = clock.getElapsedTime()
-
+            sun.current.rotation.z = sun.current.rotation.z + .003
+            sun.current.rotation.x = sun.current.rotation.z + .003
+            
+               
         })
 
         return (
-            <mesh ref={sphere2} position={[-1, 1, 0]}>
+            <mesh ref={sun} position={[-1, 1, 0]} scale={1.25}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
-                    map={colorMap}
+                    map={suncolormap}
                     
                 />
             </mesh>
-
         )
     }
+    
+    function EARTH() {
 
-    //Animated Primary Sphere model
-    function AnimatedSphere3() {
-
-        const sphere3 = React.useRef();
-
-        const [colorMap, normalMap, specularMap] = useTexture([
+        const [earthcolormap, earthnormalmap, earthspecularmap] = useTexture([
             './textures/earth_daymap.jpg',
             './textures/earth_normal_map.jpg',
             './textures/earth_specular_map.jpg',
-            
-           
-
         ])
 
         useFrame(({ clock }) => {
-            sphere3.current.rotation.y = clock.getElapsedTime()
-
+            earth.current.rotation.y = earth.current.rotation.y + 0.010
+               
         })
 
         return (
-            <mesh ref={sphere3} position={[4, 3, -4]}>
+            <mesh ref={earth} position={[4, 3, -8]}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
-                    map={colorMap}
-                    normalMap={normalMap}
-                    specularMap={specularMap}                   
+                    map={earthcolormap}
+                    normalMap={earthnormalmap}
+                    specularMap={earthspecularmap}                   
 
                 />
             </mesh>
-
         )
     }
+    
+    
+    function MOON() {
+
+       var pivot = new Object3D();
+       pivot.add(moon);
+       
+        const [mooncolormap, moonnormalmap] = useTexture([
+            './textures/moon.jpg',
+            './textures/moonnormal.jpg',
+    
+        ])
+
+        useFrame(({ clock }) => {
+            moon.current.rotation.y = moon.current.rotation.y + 0.03
+           
+               
+        })
+
+        return (
+            <mesh ref={moon} position={[2, 3.65, -9]} scale={.50}>
+                <sphereGeometry args={[1, 100, 100]} />
+                <meshPhongMaterial
+                    map={mooncolormap}
+                    normalMap={moonnormalmap}
+
+                />
+            </mesh>
+        )
+    }
+
+   
     //THE STAGE CANVAS  --defines the scene, lighting, and objects to place including helpers and user controls   
     return (
         <div className="canvas-container" >
@@ -134,19 +135,19 @@ const Stage = () => {
                     {/*Atmosphere*/}
                     <Environment preset={"night"} background />
                     <ambientLight intensity={.5} />
-                    <directionalLight position={[-1,0,0]} intensity={1} color={0xffffff}/>
+                    <directionalLight position={[-1, 0, 0]} intensity={1} color={0xffffff} />
 
-                    
+
                     {/*Camera and Controls*/}
                     <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
 
-                    {/*Component Models*/}
-                    <AnimatedSphere1 />
-                    <AnimatedSphere2 />
-                    <AnimatedSphere3 />
+                    {/*Component Models (moon, sun, earth)*/}
+                    <SUN/>
+                    <EARTH/>
+                    <MOON/>
 
                 </Suspense>
-               
+
             </Canvas>
         </div>
     )
