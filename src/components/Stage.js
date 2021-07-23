@@ -60,7 +60,7 @@ const Stage = () => {
         })
 
         return (
-            <mesh ref={sun} position={[-1, 1, 0]} scale={1.25}>
+            <mesh ref={sun} position={[-1, 1, 0]} scale={1.25} onClick={()=>{window.alert("Left Mouse=Rotate; Right Mouse=Pan; Wheel=Zoom")}}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     map={suncolormap}
@@ -142,14 +142,17 @@ const Stage = () => {
                     <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
 
                     {/*Component Models (moon, sun, earth)*/}
-                    <SUN/>
+                    <SUN />
                     <EARTH/>
                     <MOON/>
 
                 </Suspense>
-
+                
             </Canvas>
+           
         </div>
+        
+       
     )
 }
 

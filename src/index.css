@@ -84,9 +84,6 @@ body,h1,h2,h3,h4,h5,h6 {
   
 }
 
-/*SHARED STYLING FOR PROJECT COMPONENETS*/
-
-
 
 /*STYLING FOR INTRODUCTION COMPONENT*/
 
@@ -232,3 +229,5 @@ blockquote p {
   height: 100vh;
   margin-top: var(--topmarg);
  }
+
+ 
