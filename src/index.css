@@ -28,6 +28,44 @@ body,h1,h2,h3,h4,h5,h6 {
   
 } 
 
+/*STYLES FOR EACH PAGE HEADER SECTION*/
+
+.attributions {
+  display: block;
+  font-size: .75rem;
+  color:#00bdbd;
+  line-height: 1.5em;
+}
+
+.subtitlespan {
+  display: block;
+  color:#00bdbd;
+  font-size: 1rem;
+}
+
+.headerblock {
+  background: var(--dark-bg);
+  grid-column: 2 / span 7;
+  padding: 1rem;
+  margin-bottom: var(--spacing);
+}
+
+.headerimagecontainer {
+  float: left;
+  margin-right: 20px;
+}
+
+.headertitle {
+  display: block;
+  background-color: #b86f44;
+  padding: 5px;
+}
+
+.headersubtitle{
+  font-size: 1.75rem;
+  
+}
+
 /*STYLING FOR NAV HEADER AND FOOTER*/
 
 /* Style for font awesome navigation icons*/
@@ -102,14 +140,10 @@ body,h1,h2,h3,h4,h5,h6 {
   grid-template-columns: repeat(12, 1fr); /* 12 column width at 1 fractional unit*/
 }
 
-.introheader {
-  background: var(--dark-bg);
-  grid-column: 2 / span 7;
-  font-size: 2rem;
-  padding: 1rem;
-  line-height: 2.0;
-  margin-bottom: var(--spacing);
-}
+
+
+
+
 
 #introsection {
   grid-column: 6 / 12;
@@ -165,10 +199,7 @@ blockquote p {
 
 
 /*STYLING FOR DND COMPONENT*/
-.imagecontainer {
-  float: left;
-  margin-right: 20px;
-}
+
 
 .dnd {   
   width: 100%;
@@ -194,11 +225,7 @@ blockquote p {
   margin-bottom: var(--spacing);
 }
 
-.dndattribution {
-  display: block;
-  font-size: 1rem;
-  color:darkcyan;
-}
+
 
 #dndsection {
   grid-column: 6 / 12;

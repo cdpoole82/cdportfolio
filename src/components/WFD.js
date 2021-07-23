@@ -11,10 +11,15 @@ const Introduction = () => {
                                  
             <main id="intromain">
                                
-                <header className="introheader">
-                   <img src={wfdlogo} alt="Workforce Director logo" style={{float:"left", marginRight:"30px", width:"200px",height:"80px"}} />
-                   <h1>Workforce Director</h1>
-                   <p>A VB.NET Web Application</p>
+                <header className="headerblock">
+                   <img className="headerimagecontainer" src={wfdlogo} alt="Workforce Director logo" style={{width:"250px",height:"100px"}} />
+                   <h1 className="headertitle">Workforce Director</h1>
+                   <p className="headersubtitle">A Public Safety Web Application
+                   <span className="subtitlespan">Built on VB.NET and SQL Enterprise</span>
+                   </p>
+                   <p>
+                   <a className="attributions" href="https://www.freepik.com/" rel="noreferrer" target="_blank">Page background designed by upklyak / Freepik</a>
+                   </p>
                 </header>
 
                 

@@ -9,14 +9,15 @@ const Introduction = () => {
 
             <main id="dndmain">
 
-                <header className="dndheader">
-
-                    <img className="imagecontainer" src={dndlogo} alt="Dragon Logo" style={{ width: "200px", height: "200px" }} />
-                    <h1>Digital Dungeon Master</h1>
-                    <p>A C#.NET Game Utility Application</p>
+                <header className="headerblock">
+                    <img className="headerimagecontainer" src={dndlogo} alt="Dragon Logo" style={{ width: "250px", height: "250px" }} />
+                    <h1 className="headertitle">Digital Dungeon Master</h1>
+                    <p className="headersubtitle">A Game Utility Application
+                    <span className="subtitlespan">Built on C#.NET and SQL Express</span>
+                    </p>
                     <p>
-                        <a className="dndattribution" href="http://www.freepik.com" rel="noreferrer" target="_blank">Logo Designed by dgim-studio / Freepik</a>
-                        <a className="dndattribution" href="http://www.freepik.com" rel="noreferrer" target="_blank">Background Designed by dgim-studio / Freepik</a>
+                        <a className="attributions" href="http://www.freepik.com" rel="noreferrer" target="_blank">Header logo designed by dgim-studio / Freepik</a>
+                        <a className="attributions" href="http://www.freepik.com" rel="noreferrer" target="_blank">Page background designed by dgim-studio / Freepik</a>
                     </p>
 
                 </header>

@@ -2,23 +2,29 @@ import cdp1 from "../images/cdp1.png"
 
 
 const Introduction = () => {
-       
+
     return (
         <div className="introduction">
-                                 
+
             <main id="intromain">
-                               
-                <header className="introheader">
-                   <img src={cdp1} alt="Christopher Poole" style={{float:"left", marginRight:"30px", width:"200px",height:"200px"}} />
-                   <h1>Christopher Poole</h1>
-                   <p>Welcome to my portfolio!</p>
+
+                <header className="headerblock">
+                    <img className="headerimagecontainer" src={cdp1} alt="Christopher Poole" style={{ width: "200px", height: "200px" }} />
+                    <h1 className="headertitle">Christopher Poole</h1>
+                    <p className="headersubtitle">
+                        Welcome to my portfolio!
+                        <span className="subtitlespan">Built on React and Node.js</span>
+                    </p>
+                    <p>
+                        <a className="attributions" href="https://www.freepik.com/free-photo/summer-beach-shot-from-ground-view_15007454.htm" rel="noreferrer" target="_blank">Page background designed by Rawpixel.com / Freepik</a>
+                    </p>
                 </header>
 
                 <blockquote className="blockquoteintro">
                     <p>
-                    "The mind is like a parachute; it works better when it's open." <em> -Unknown</em>
+                        "The mind is like a parachute; it works better when it's open." <em> -Unknown</em>
                     </p>
-                
+
                 </blockquote>
 
                 <section id="introsection">
@@ -37,16 +43,16 @@ const Introduction = () => {
 
                 </section>
 
-                
+
                 <blockquote className="blockquoteintro">
                     <p>
                         "I shut my eyes in order to see." <em> -Paul Gauguin</em>
                     </p>
                 </blockquote>
 
-                
+
             </main>
-            
+
         </div>
     )
 }
