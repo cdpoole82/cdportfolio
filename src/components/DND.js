@@ -27,7 +27,7 @@ const Introduction = () => {
                     <h2>Project</h2>
                     <h4>Purpose</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Programming is fun. Dungeons and Dragons is fun. Is coding Dungeons and Dragons fun…for sure! In 2014 I was gaming with friends running a game of 4th edition (the most unnecessarily complicated edition) and thought to myself, "Could I make running this experience easier? There is so much to track and I am very much anti-lots of paper." So, I decided to test this question by programming a desktop application to see what I could make easier and then try it out on my friends. Let's just say, there were definitely some mid-game crashes now and again, but generally we liked it (especially the combat tracker displayed on a second screen).
                     </p>
                     <h4>Technology</h4>
                     <p>

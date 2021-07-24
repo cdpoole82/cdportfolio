@@ -3,6 +3,7 @@ import Stage from './components/Stage'
 import WFD from './components/WFD'
 import DND from './components/DND'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import TestPage from './components/TestPage'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { MdRotate90DegreesCcw } from 'react-icons/md'
@@ -19,6 +20,7 @@ function App() {
   return (
   
       <Router>
+        <ScrollToTop/>
         <div >
           <nav className="topnav">
             <Link to="/Introduction">HOME</Link>
