@@ -11,31 +11,13 @@
     --the Canvas component provides an inherit frame loop. The useFrame function hooks into that frame loop to execute items in a loop.
     --using the threeJS object clock allows us increment geomesh properties on each tick
 
-    <MeshWobbleMaterial 
-                color='hotpink' 
-                factor={1}
-                speed={10}
-    />
-
-    <meshPhongMaterial
-                    displacementScale={0.2}
-                    map={colorMap}
-                    displacementMap={displacementMap}
-                    normalMap={normalMap}
-                    roughnessMap={roughnessMap}
-                    aoMap={aoMap}
-                                        
-     />
-
 */
 
 import React from 'react'
 import { Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, useTexture, Environment } from '@react-three/drei'
-import { Object3D } from 'three';
-
-
+import InfoPanel from './InfoPanel';
 
 const Stage = () => {
 
@@ -44,7 +26,7 @@ const Stage = () => {
     const earth = React.useRef();
     const moon = React.useRef();
 
-          
+
     //CREATE MESHES
     function SUN() {
 
@@ -55,21 +37,21 @@ const Stage = () => {
         useFrame(({ clock }) => {
             sun.current.rotation.z = sun.current.rotation.z + .003
             sun.current.rotation.x = sun.current.rotation.z + .003
-            
-               
+
+
         })
 
         return (
-            <mesh ref={sun} position={[-1, 1, 0]} scale={1.25} onClick={()=>{window.alert("Left Mouse=Rotate; Right Mouse=Pan; Wheel=Zoom")}}>
+            <mesh ref={sun} position={[-1, 1, 0]} scale={1.25} onClick={() => { window.alert("Left Mouse=Rotate; Right Mouse=Pan; Wheel=Zoom") }}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     map={suncolormap}
-                    
+
                 />
             </mesh>
         )
     }
-    
+
     function EARTH() {
 
         const [earthcolormap, earthnormalmap, earthspecularmap] = useTexture([
@@ -80,7 +62,7 @@ const Stage = () => {
 
         useFrame(({ clock }) => {
             earth.current.rotation.y = earth.current.rotation.y + 0.010
-               
+
         })
 
         return (
@@ -89,29 +71,27 @@ const Stage = () => {
                 <meshPhongMaterial
                     map={earthcolormap}
                     normalMap={earthnormalmap}
-                    specularMap={earthspecularmap}                   
+                    specularMap={earthspecularmap}
 
                 />
             </mesh>
         )
     }
-    
-    
+
+
     function MOON() {
 
-       var pivot = new Object3D();
-       pivot.add(moon);
-       
+
         const [mooncolormap, moonnormalmap] = useTexture([
             './textures/moon.jpg',
             './textures/moonnormal.jpg',
-    
+
         ])
 
         useFrame(({ clock }) => {
             moon.current.rotation.y = moon.current.rotation.y + 0.03
-           
-               
+
+
         })
 
         return (
@@ -126,10 +106,13 @@ const Stage = () => {
         )
     }
 
-   
+        
+
     //THE STAGE CANVAS  --defines the scene, lighting, and objects to place including helpers and user controls   
     return (
+
         <div className="canvas-container" >
+           <InfoPanel/>
             <Canvas >
                 <Suspense fallback={null}>
                     {/*Atmosphere*/}
@@ -143,16 +126,15 @@ const Stage = () => {
 
                     {/*Component Models (moon, sun, earth)*/}
                     <SUN />
-                    <EARTH/>
-                    <MOON/>
+                    <EARTH />
+                    <MOON />
 
                 </Suspense>
-                
+
             </Canvas>
-           
+
         </div>
-        
-       
+
     )
 }
 

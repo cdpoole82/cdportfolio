@@ -7,7 +7,7 @@
 
 /* bogus is not called, but I use it for a quick color picker*/
 .bogus {
-  color: #c7c7ca
+  color: #ff9741
 }
 
 /*root = HTML element* and a good element to define style variables 
@@ -64,6 +64,31 @@ body,h1,h2,h3,h4,h5,h6 {
 .headersubtitle{
   font-size: 1.75rem;
   
+}
+
+/*INFO PANEL*/
+.panel-container {
+  background-color: #084121;
+  padding: 1rem;
+}
+
+.panel-text {
+  color:#bee7ff;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+.panel-button{
+  background-color: transparent;
+  border: none;
+  color: #9e9e9e;
+  text-align: right;
+  text-decoration: none;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 15px;
+  padding: 5px 5px;
+  cursor: pointer;
 }
 
 /*STYLING FOR NAV HEADER AND FOOTER*/
@@ -257,4 +282,5 @@ blockquote p {
   margin-top: var(--topmarg);
  }
 
+ 
  
