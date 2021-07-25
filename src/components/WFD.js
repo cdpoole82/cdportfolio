@@ -34,11 +34,11 @@ const Introduction = () => {
                     </p>
                     <h4>Technology</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        WorkForce Director is built on a VB.NET/ASPX web platform using SQL for its database engine. It leveraged CSS, .NET and third-party web components for its front-end, custom-built libraries for the logic layer, and SQL stored procedures for database integration. The system logic and database was architected with a data-table driven configuration approach to be easily customized by client and changed on-the-fly. For system integration, web services were built to provide payroll and HR data exchanges.
                     </p>
                     <h4>Learning</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        As the lead business analyst for the application for 7 years, my contributions were focused on the user experience, feature adoption and expansion, testing, and client configuration. My technical hands on experience included managing CSS, modifying front-end presentation code, and managing configuration data for local environments and client-sites.
                     </p>
 
                 </section>

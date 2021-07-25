@@ -31,11 +31,11 @@ const Introduction = () => {
                     </p>
                     <h4>Technology</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        The Digital Dungeon Master (DDM) desktop application was built using Visual Studio with C#.NET framework and leveraged SQL Express for its database needs. The application was built with a primary window container allowing for multiple non-modal windows to be opened at one time to leverge several functions and reference information at one time.
                     </p>
                     <h4>Learning</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Developing the DDM application gave me experience developing a desktop application vs working with the web applications I was use to professionally. It gave me experience using data-bindings for a simple database interface and how to juggle multiple non-modal windows at once including displaying data on a second screen.
                     </p>
 
                 </section>
