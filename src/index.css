@@ -310,5 +310,66 @@ blockquote p {
   margin-top: var(--topmarg);
  }
 
+/*CANADA PAGE*/
+ 
+ .canada-page {
+  margin-top: var(--topmarg);
+  padding: 50px;
+  height: 100vh;
+  background-image: url("./images/uscanflag.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.framing{
+  text-align: center;
+  padding: 15px; 
+}
+
+.clocktitle{
+  background-color: #ff3333;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: cursive;
+  padding: 5px;
+   
+}
+
+.img-bitmoji{
+  border-width: thick;
+  border-style: solid;
+  border-color: #4f4b88;
+  
+}
+
+/*CLOCK COMPONENT*/
+#clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+}
+
+#clockdiv > div{
+  padding: 15px;
+  background: #439ff5;
+  display: inline-block;
+}
+
+#clockdiv div > span{
+  padding: 15px;
+  border-radius: 10px;
+  background: #5750b3;
+  display: inline-block;
+}
+
+.smalltext{
+  padding-top: 5px;
+  font-size: 16px;
+}
  
  

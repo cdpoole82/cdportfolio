@@ -5,6 +5,7 @@ import DND from './components/DND'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 import TestPage from './components/TestPage'
+import Canada from './components/Canada'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { MdRotate90DegreesCcw } from 'react-icons/md'
 import { FaDatabase } from 'react-icons/fa'
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/Stage">
             <Stage />
+          </Route>
+          <Route path="/Canada">
+            <Canada />
           </Route>
           {/* <Route path="/TestPage">
               <TestPage />
