@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Clock = () => {
 
-    const deadline = "2021-8-13";
+    const deadline = "Fri Aug 13 2021 15:00:00 GMT-0500";
     const [timer, setTimer] = useState({days: 0, hours: 0, minutes: 0, seconds: 0})
     
     function getTimeRemaining(endtime) {
