@@ -16,45 +16,45 @@ import { GiSpikedDragonHead } from 'react-icons/gi'
 
 function App() {
 
-  
+
   return (
-  
-      <Router>
-        <ScrollToTop/>
-        <div >
-          <nav className="topnav">
-            <Link to="/Introduction">HOME</Link>
-            <Link to="/WFD"><FaDatabase className='fa-icon' />WFD Application</Link>
-            <Link to="/Stage"><MdRotate90DegreesCcw className='fa-icon' />3D Animation</Link>
-            <Link to="/DND"><GiSpikedDragonHead className='fa-icon' />D&D Utility</Link>
-            {/* <Link to="/TestPage">Test Page</Link> */}
-          </nav>
-          {/* A <Switch> looks through its children <Route>s and
+
+    <Router>
+      <ScrollToTop />
+      <div >
+        <nav className="topnav">
+          <Link to="/Introduction">HOME</Link>
+          <Link to="/WFD"><FaDatabase className='fa-icon' />WFD Application</Link>
+          <Link to="/DND"><GiSpikedDragonHead className='fa-icon' />D&D Utility</Link>
+          <Link to="/Stage"><MdRotate90DegreesCcw className='fa-icon' />3D Animation</Link>
+          {/* <Link to="/TestPage">Test Page</Link> */}
+        </nav>
+        {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
-          <Switch>
-            <Route exact path="/">
-              <Introduction />
-            </Route>
-            <Route path="/Introduction">
-              <Introduction />
-            </Route>
-            <Route path="/Stage">
-              <Stage/>
-            </Route>    
-            <Route path="/WFD">
-              <WFD />
-            </Route>     
-            <Route path="/DND">
-              <DND />
-            </Route>
-            {/* <Route path="/TestPage">
+        <Switch>
+          <Route exact path="/">
+            <Introduction />
+          </Route>
+          <Route path="/Introduction">
+            <Introduction />
+          </Route>
+          <Route path="/WFD">
+            <WFD />
+          </Route>
+          <Route path="/DND">
+            <DND />
+          </Route>
+          <Route path="/Stage">
+            <Stage />
+          </Route>
+          {/* <Route path="/TestPage">
               <TestPage />
             </Route>       */}
-          </Switch>
-          <Footer />
-        </div>
-      </Router>
-         
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+
   );
 }
 

@@ -24,7 +24,7 @@ const Introduction = () => {
 
 
                 <section id="dndsection">
-                    <h2>Project</h2>
+                    <h2 className="sectiontitle">Project</h2>
                     <h4>Purpose</h4>
                     <p>
                     Programming is fun. Dungeons and Dragons is fun. Is coding Dungeons and Dragons fun…for sure! In 2014 I was gaming with friends running a game of 4th edition (the most unnecessarily complicated edition) and thought to myself, "Could I make running this experience easier? There is so much to track and I am very much anti-lots of paper." So, I decided to test this question by programming a desktop application to see what I could make easier and then try it out on my friends. Let's just say, there were definitely some mid-game crashes now and again, but generally we liked it (especially the combat tracker displayed on a second screen).

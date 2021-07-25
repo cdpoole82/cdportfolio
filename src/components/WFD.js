@@ -26,7 +26,7 @@ const Introduction = () => {
 
                 
                 <section id="wfdsectionright">
-                    <h2>Project</h2>
+                    <h2 className="sectiontitle">Project</h2>
                     <h4>Purpose</h4>
                     <p>WorkForce Director is a public safety personnel management web application with a focus on 24-hr employee scheduling, timekeeping, and payroll.  The application was a grassroots creation by the Minneapolis Police Department in the late 1990's and modernized by 2004 through a partnership with Sogeti LLC to update from VB6  to a web accessible and scalable VB.NET application. 
                        Since its upgrade, WorkForce Director has expanded its user base to serve 12+ public safety departments in the Greater Minneapolis Metro area.
@@ -44,7 +44,7 @@ const Introduction = () => {
                 </section>
 
                 <section id="wfdsection">
-                    <h2>User Interface</h2>
+                    <h2 className="sectiontitle">User Interface</h2>
                     <h4>Silverlight Scheduling Upgrade (before and after)</h4>                                
                     
                     <p>

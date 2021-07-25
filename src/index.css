@@ -28,6 +28,11 @@ body,h1,h2,h3,h4,h5,h6 {
   
 } 
 
+.sectiontitle {
+  font-size: 1.75rem;
+  color: burlywood;
+}
+
 /*STYLES FOR EACH PAGE HEADER SECTION*/
 
 .attributions {
@@ -57,7 +62,7 @@ body,h1,h2,h3,h4,h5,h6 {
 
 .headertitle {
   display: block;
-  background-color: #b86f44;
+  background-color: #cca97c;
   padding: 5px;
 }
 
@@ -165,11 +170,6 @@ body,h1,h2,h3,h4,h5,h6 {
   grid-template-columns: repeat(12, 1fr); /* 12 column width at 1 fractional unit*/
 }
 
-
-
-
-
-
 #introsection {
   grid-column: 6 / 12;
   padding: 1rem;
@@ -192,6 +192,17 @@ blockquote p {
   display: inline;
   line-height: 1;
 }
+
+/*Learning Details Styles*/
+
+
+.details-link a {
+  display: block;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.15rem;
+  color:#d6e3fc;
+}
+
 
 /*STYLING FOR WFD COMPONENT*/
 .wfd {   
