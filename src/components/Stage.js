@@ -42,7 +42,7 @@ const Stage = () => {
         })
 
         return (
-            <mesh ref={sun} position={[-1, 1, 0]} scale={1.25} onClick={() => { window.alert("Left Mouse=Rotate; Right Mouse=Pan; Wheel=Zoom") }}>
+            <mesh ref={sun} position={[-1, 1, 0]} scale={1.25}>
                 <sphereGeometry args={[1, 100, 100]} />
                 <meshPhongMaterial
                     map={suncolormap}

@@ -8,7 +8,7 @@ const InfoPanel = () => {
         <div className="panel-container" style={{display: panelDisplayStyle}}>
             <p className="panel-text">
             <button type="button" className="panel-button"  onClick={()=>{setPanelDisplayStyle("none")}}><FaWindowClose/></button>
-            This starry night dusk setting inspired the desire to create some celestial orbs using the 3D animation language Three JS and React Three Fiber helpers.          
+            This starry night at dusk setting inspired the desire to create celestial orbs using the 3D animation language Three JS and React Three Fiber helpers. <b>To explore:</b> use left-mouse to rotate, right-mouse to pan, and scroll to zoom.         
             </p>
         </div>
     )
