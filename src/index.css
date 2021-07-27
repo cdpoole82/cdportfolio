@@ -322,12 +322,12 @@ blockquote p {
   
 }
 
-.framing{
+.clock-framing{
   text-align: center;
   padding: 15px; 
 }
 
-.clocktitle{
+.clocktitle-can{
   background-color: #ff3333;
   color: #ffffff;
   font-size: 40px;
@@ -351,19 +351,20 @@ blockquote p {
   font-weight: 100;
   text-align: center;
   font-size: 40px;
-  padding: 20px;
+  padding: 10px;
+  
 }
 
 #clockdiv > div{
-  padding: 15px;
-  background: #439ff5;
+  padding:25px;
+  background: #8f85851e;
   display: inline-block;
 }
 
 #clockdiv div > span{
-  padding: 15px;
+  padding: 16px;
   border-radius: 10px;
-  background: #5750b3;
+  background: #f1ac5c;
   display: inline-block;
 }
 
@@ -372,5 +373,29 @@ blockquote p {
   font-size: 16px;
 }
 
+/*WIDGET PAGE*/
+.widget-page {
+  margin-top: var(--topmarg);
+  padding: 50px;
+  height: 100vh;
+  background-color: #ececec;
+} 
 
- 
+.clocktitle{
+  color: #6692f1;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 10px;
+   
+}
+
+.widget-framing{
+  background-image: url("../src/images/fireworks.jpg");
+  text-align: center;
+  width: fit-content;
+  padding: 10px; 
+  border: dimgray;
+  border-width: medium;
+  border-style: solid;
+  border-radius: 5px;
+}

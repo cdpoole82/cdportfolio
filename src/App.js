@@ -4,12 +4,14 @@ import WFD from './components/WFD'
 import DND from './components/DND'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import Widgets from './components/Widgets'
 import TestPage from './components/TestPage'
 import Canada from './components/Canada'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { MdRotate90DegreesCcw } from 'react-icons/md'
 import { FaDatabase } from 'react-icons/fa'
 import { GiSpikedDragonHead } from 'react-icons/gi'
+import { BsGearWideConnected} from 'react-icons/bs'
 
 
 
@@ -28,6 +30,7 @@ function App() {
           <Link to="/WFD"><FaDatabase className='fa-icon' />WFD Application</Link>
           <Link to="/DND"><GiSpikedDragonHead className='fa-icon' />D&D Utility</Link>
           <Link to="/Stage"><MdRotate90DegreesCcw className='fa-icon' />3D Animation</Link>
+          <Link to="/Widgets"><BsGearWideConnected className='fa-icon' />Widgets</Link>
           {/* <Link to="/TestPage">Test Page</Link> */}
         </nav>
         {/* A <Switch> looks through its children <Route>s and
@@ -47,6 +50,9 @@ function App() {
           </Route>
           <Route path="/Stage">
             <Stage />
+          </Route>
+          <Route path="/Widgets">
+            <Widgets/>
           </Route>
           <Route path="/Canada">
             <Canada />
